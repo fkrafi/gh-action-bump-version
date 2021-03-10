@@ -52,6 +52,9 @@ Toolkit.run(async tools => {
     }
   }
   ))) {
+    console.log('------------------------');
+    console.log(process.env.INPUT_PREID);
+    console.log('------------------------');
     const preid = process.env.INPUT_PREID || foundWord.split('-')[1]
     version = `prerelease --preid=${preid}`
   } else if (Array.isArray(patchWords) && patchWords.length) {
